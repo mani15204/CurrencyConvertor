@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="top">
+
+    <TextView
+        android:id="@+id/AppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency Convertor App"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:paddingTop ="20sp" />
+
+    <TextView
+        android:id="@+id/AppDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AppTitle"
+        android:paddingTop="20sp"
+        android:textAlignment="center"
+        android:text = "Easily switch between Pounds to Dollars and vice versa with the dropdown below."
+        android:textSize="20sp"/>
+
+    <Spinner
+        android:id="@+id/currencySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/currency_array"
+        android:layout_below="@+id/AppDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"/>
+
+    <EditText
+        android:id="@+id/inputValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencySpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:hint=""
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputValue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:text="Convert"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text=""
+        android:layout_below="@id/btnConvert"
+        android:layout_marginTop="60sp"
+        android:textAlignment="center"/>
+
+
+
+</RelativeLayout>
